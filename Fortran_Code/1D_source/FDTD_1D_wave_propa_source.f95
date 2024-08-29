@@ -9,7 +9,7 @@ program FDTD_1D_wave_propa
    Integer::qtime,mm
    Integer,parameter::maxTime=250
    Real,dimension(0:maxTime)::E50,Esource!,E20,E30,E40
-   Real,dimension(0:maxTime,0:size-1)::dataE,dataH
+   Real,dimension(0:maxTime,0:size)::dataE,dataH
 
    ez(:)=0.0
    hy(:)=0.0
@@ -40,7 +40,7 @@ program FDTD_1D_wave_propa
       ! electric field
       do mm = 2, size
          ez(mm)=ez(mm)+(hy(mm)-hy(mm-1))*imp0
-         dataE(qtime,mm-1)=ez(mm)
+         dataE(qtime,mm)=ez(mm)
       end do
 
       ! node
@@ -52,8 +52,7 @@ program FDTD_1D_wave_propa
 
       E50(qtime)=ez(ind)
 
-      dataE(qtime,ind-1)=ez(ind)
-
+      !dataE(qtime,ind-1)=ez(ind)
 
       if ( qtime==ind2 ) then
          do mm = 1, size-1

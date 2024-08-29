@@ -4,7 +4,7 @@ program FDTD_1D_wave_propa
    !Variables y parametros
    Integer,parameter::size=200
    Real,parameter::imp0=377.0, pos0=10.0
-   Integer,parameter::ind=1!50 ! indice de tiempo para graficar al punto de propagacion
+   Integer,parameter::ind=50 ! indice de tiempo para graficar al punto de propagacion
    Real,dimension(size)::ez,hy
    Integer::qtime,mm
    Integer,parameter::maxTime=250

@@ -1,16 +1,16 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x=np.linspace(0, 200, 200)
-t=np.linspace(0, 50, 50)
-#t=np.linspace(0, 250, 250)
+x=np.linspace(0, 200, 201)
+#t=np.linspace(0, 50, 50)
+t=np.linspace(0, 250, 250)
 
 Dx,Dt=np.meshgrid(x,t)
 
 print(Dx.shape)
 
 E = np.genfromtxt('dataE.txt') #
-E = E[0:50,:]
+#E = E[0:50,:]
 print(E.shape)
 
 fig, ax = plt.subplots()
@@ -27,4 +27,7 @@ print(np.max(E))
 
 plt.grid(alpha=0.5)
 #plt.legend()
+plt.xlabel('Espacio')
+plt.ylabel('Tiempo')
+plt.tight_layout()  
 plt.show()

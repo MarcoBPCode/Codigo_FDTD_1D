@@ -36,7 +36,8 @@ program FDTD_1D_wave_propa
 
       ! node
       !ez(1)=exp((-1*(qtime-pos0)*(qtime-pos0))/100.0)
-      ez(ind)=ez(ind)+exp((-1*(qtime-pos0)*(qtime-pos0))/sigma)
+      !ez(ind)=ez(ind)+exp((-1*(qtime-pos0)*(qtime-pos0))/sigma)
+      ez(ind)=ez(ind)+exp((1*(qtime-pos0)*(qtime-pos0))/sigma)
 
       !Esource(qtime)=ez(1)
 

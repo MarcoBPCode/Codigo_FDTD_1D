@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-E = np.genfromtxt('E.txt') #
-E50 = np.genfromtxt('E50.txt') #
-Esource = np.genfromtxt('Esource.txt')
+#E = np.genfromtxt('E.txt') #
+E50 = np.genfromtxt('E50_1.txt') #
+#Esource = np.genfromtxt('Esource.txt')
 
-E50_1 = np.genfromtxt('E50_1.txt') #
+#E50_1 = np.genfromtxt('E50_1.txt') #
 Esource_1 = np.genfromtxt('Esource_1.txt')
 
 H = np.genfromtxt('H.txt') #
